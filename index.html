@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divya Radhakrishnan | AI Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #2563eb;
-            --secondary: #1e293b;
-            --accent: #38bdf8;
-            --bg: #f8fafc;
-            --text: #0f172a;
+            --navy: #1f4e79;      /* Your signature blue */
+            --cream: #fdf6e3;     /* Your signature cream */
+            --dark-text: #2c3e50;
+            --white: #ffffff;
+            --accent: #d4af37;    /* Subtle gold for highlights */
         }
 
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            color: var(--text);
-            line-height: 1.6;
-            scroll-behavior: smooth;
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-text);
+            line-height: 1.7;
         }
 
         header {
-            background: var(--secondary);
-            color: white;
-            padding: 60px 20px;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 50px 20px;
+            border-bottom: 5px solid var(--accent);
         }
 
         .header-container {
@@ -37,94 +36,92 @@
             display: flex;
             align-items: center;
             gap: 40px;
-            flex-wrap: wrap;
         }
 
         header img {
-            width: 160px;
-            height: 160px;
-            border-radius: 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 4px; /* Classic square-ish look */
             object-fit: cover;
-            border: 4px solid rgba(255,255,255,0.1);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 3px solid var(--cream);
+            box-shadow: 5px 5px 0px var(--accent);
         }
 
-        .header-text h1 {
+        header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: -1px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.2rem;
         }
 
-        .tagline {
-            color: var(--accent);
-            font-size: 1.1rem;
-            font-weight: 500;
+        .subtitle {
             margin-top: 10px;
+            font-size: 1.1rem;
+            color: #d1dce5;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 300;
         }
 
         nav {
+            background: var(--white);
             position: sticky;
             top: 0;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 15px;
+            padding: 15px 0;
             text-align: center;
+            border-bottom: 1px solid #e0d9c5;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            color: var(--secondary);
-            font-weight: 600;
+            color: var(--navy);
+            font-weight: 700;
             font-size: 0.9rem;
-            transition: color 0.3s;
+            text-transform: uppercase;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: var(--primary);
+            color: var(--accent);
         }
 
         section {
-            max-width: 900px;
-            margin: 60px auto;
+            max-width: 1000px;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
         .section-box {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(5px);
+            background: var(--white);
             padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            margin-bottom: 30px;
-            border: 1px solid white;
-            transition: transform 0.3s ease;
-        }
-
-        .section-box:hover {
-            transform: translateY(-5px);
+            border-radius: 2px;
+            box-shadow: 10px 10px 0px rgba(31, 78, 121, 0.05);
+            margin-bottom: 40px;
+            border: 1px solid #eee;
         }
 
         h2 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--navy);
+            font-size: 1.6rem;
             margin-top: 0;
-            color: var(--primary);
-            font-size: 1.5rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
         }
 
-        .badge {
-            display: inline-block;
-            background: #dcfce7;
-            color: #166534;
-            padding: 2px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-left: 10px;
+        h2::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: #e0d9c5;
+            margin-left: 20px;
+        }
+
+        /* About Me - Third Person Text */
+        .about-text {
+            font-size: 1.05rem;
+            text-align: justify;
         }
 
         ul {
@@ -133,116 +130,109 @@
         }
 
         ul li {
-            margin-bottom: 12px;
+            padding: 10px 0 10px 30px;
+            border-bottom: 1px solid #f9f9f9;
             position: relative;
-            padding-left: 25px;
         }
 
         ul li::before {
-            content: "→";
+            content: "◈";
             position: absolute;
             left: 0;
-            color: var(--primary);
+            color: var(--accent);
+        }
+
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+
+        .contact-links a {
+            color: var(--navy);
             font-weight: bold;
+            text-decoration: none;
+            border-bottom: 2px solid var(--accent);
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-item {
-            background: #f1f5f9;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-align: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--secondary);
-            color: rgba(255,255,255,0.6);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            .header-container { text-align: center; justify-content: center; }
-            header { clip-path: none; padding-bottom: 40px; }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <div class="header-container">
         <img src="profile.jpg" alt="Divya Radhakrishnan">
-        <div class="header-text">
+        <div>
             <h1>Divya Radhakrishnan</h1>
-            <p class="tagline">AI Engineer | Signal Processing | Agentic AI Specialist</p>
+            <p class="subtitle">AI Engineer | Signal Processing Specialist</p>
         </div>
     </div>
 </header>
 
 <nav>
-    <a href="#about">About</a>
+    <a href="#about">Profile</a>
     <a href="#credentials">Credentials</a>
     <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
+    <a href="#skills">Technical</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
     <div class="section-box">
-        <h2>About Me</h2>
-        <p>I am an Electronics and Communication Engineer with over 8 years of academic experience and an M.Tech in Signal Processing. Currently, I mentor the next generation of engineers at Xylem Learning.</p>
-        <p><strong>The Transition:</strong> I am bridging the gap between deep engineering fundamentals (DSP, Image Processing) and the future of <strong>Agentic AI</strong>—building autonomous systems capable of reasoning and planning.</p>
+        <h2>Professional Profile</h2>
+        <div class="about-text">
+            <p>
+                Divya Radhakrishnan is an Electronics and Communication Engineer with over eight years of academic expertise and a specialized M.Tech in Signal Processing. She currently serves as a Freelance Faculty at Xylem Learning, where she mentors students in core electronics and prepares them for rigorous competitive examinations.
+            </p>
+            <p>
+                With a deep-rooted foundation in Digital Signal Processing, Image Processing, and Control Systems, Divya possesses a robust analytical framework for solving complex engineering problems. 
+            </p>
+            <p>
+                She is currently leveraging her engineering background to transition into the field of Artificial Intelligence. Her primary focus lies in the development of <strong>Large Language Models (LLMs) and Agentic AI</strong>—designing autonomous systems capable of sophisticated reasoning and task execution. Her objective is to merge classical engineering principles with modern intelligent systems to create scalable, real-world AI solutions.
+            </p>
+        </div>
     </div>
 </section>
 
 <section id="credentials">
     <div class="section-box">
-        <h2>Credentials</h2>
+        <h2>Credentials & Certifications</h2>
         <ul>
-            <li><strong>UGC NET Qualified (2023)</strong> <span class="badge">Electronic Science</span></li>
-            <li><strong>GATE Qualified</strong> (2011, 2013, 2023) <span class="badge">High Scores</span></li>
-            <li><strong>M.Tech in Signal Processing</strong> (CGPA 8.79)</li>
-            <li><strong>IIT NPTEL:</strong> Fundamentals of Artificial Intelligence & Python</li>
+            <li><strong>UGC NET Qualified (2023)</strong> – Assistant Professor (Electronic Science)</li>
+            <li><strong>Triple GATE Qualified</strong> – Ranked in 2011, 2013, and 2023</li>
+            <li><strong>M.Tech in Signal Processing</strong> – Graduated with First Class (CGPA 8.79)</li>
+            <li><strong>IIT NPTEL Certified</strong> – Artificial Intelligence & Python Programming</li>
+        </ul>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="section-box">
+        <h2>Professional Tenure</h2>
+        <ul>
+            <li><strong>Xylem Learning</strong> – Freelance Faculty (Competitive Coaching)</li>
+            <li><strong>Govt. Women's Polytechnic College</strong> – Guest Lecturer (2023–2025)</li>
+            <li><strong>Adi Shankara College of Engineering</strong> – Assistant Professor (2015–2019)</li>
+            <li><strong>IBS Software Services</strong> – Software Engineer, Technopark (2007–2009)</li>
         </ul>
     </div>
 </section>
 
 <section id="skills">
     <div class="section-box">
-        <h2>Technical Arsenal</h2>
-        <div class="skills-grid">
-            <div class="skill-item">Large Language Models</div>
-            <div class="skill-item">Agent Frameworks</div>
-            <div class="skill-item">Digital Signal Processing</div>
-            <div class="skill-item">Python / C++ / MATLAB</div>
-            <div class="skill-item">Computer Vision</div>
-            <div class="skill-item">FPGA Programming</div>
-        </div>
+        <h2>Technical Expertise</h2>
+        <p><strong>Core Engineering:</strong> Digital Signal & Image Processing, Control Systems, VHDL, FPGA.</p>
+        <p><strong>Software & AI:</strong> Python, C++, MATLAB, Simulink, LLM Frameworks, Agentic Systems.</p>
     </div>
 </section>
 
 <section id="contact">
     <div class="section-box" style="text-align: center;">
-        <h2>Let's Connect</h2>
-        <p>Email: <strong>divyar.krishna@gmail.com</strong></p>
-        <div style="margin-top: 20px;">
-            <a href="https://linkedin.com/in/divya-radhakrishnan-30479a68" style="color: var(--primary); font-weight: bold; text-decoration: none;">LinkedIn</a> | 
-            <a href="https://github.com/divyarkrishnan" style="color: var(--primary); font-weight: bold; text-decoration: none;">GitHub</a>
-        </div>
-    </div>
-</section>
-
-<footer>
-    © 2026 Divya Radhakrishnan | Built with AI Strategy
-</footer>
-
-</body>
-</html>
+        <h2>Inquiries & Collaboration</h2>
+        <p>Email: <strong>divyar.krishna@gmail
