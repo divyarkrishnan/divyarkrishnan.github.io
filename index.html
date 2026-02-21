@@ -3,249 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divya Radhakrishnan | AI Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Divya Radhakrishnan | AI Strategy & Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --navy: #1f4e79;      /* Your signature blue */
-            --cream: #fdf6e3;     /* Your signature cream */
-            --dark-text: #2c3e50;
-            --white: #ffffff;
-            --accent: #d4af37;    /* Subtle gold for highlights */
+            --navy: #1a3a5a;
+            --cream: #fdfaf5;
+            --gold: #c5a059;
+            --text-main: #2c3e50;
+            --text-light: #5d6d7e;
         }
 
         body {
             margin: 0;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--cream);
-            color: var(--dark-text);
-            line-height: 1.7;
+            color: var(--text-main);
+            line-height: 1.8;
         }
 
-        header {
+        /* Hero Section - The "Kumar" Style */
+        .hero {
             background-color: var(--navy);
-            color: var(--white);
-            padding: 50px 20px;
-            border-bottom: 5px solid var(--accent);
-        }
-
-        .header-container {
-            max-width: 1000px;
-            margin: auto;
+            color: white;
+            padding: 100px 10%;
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 60px;
         }
 
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 4px; /* Classic square-ish look */
+        .hero-img {
+            width: 250px;
+            height: 250px;
             object-fit: cover;
-            border: 3px solid var(--cream);
-            box-shadow: 5px 5px 0px var(--accent);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px;
         }
 
-        header h1 {
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
             margin: 0;
-            font-family: 'Libre Baskerville', serif;
-            font-size: 2.2rem;
+            line-height: 1.1;
         }
 
-        .subtitle {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            color: #d1dce5;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--gold);
             font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 15px;
         }
 
+        /* Navigation */
         nav {
-            background: var(--white);
+            padding: 20px 10%;
+            background: white;
+            display: flex;
+            justify-content: flex-start;
+            gap: 40px;
             position: sticky;
             top: 0;
-            padding: 15px 0;
-            text-align: center;
-            border-bottom: 1px solid #e0d9c5;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             z-index: 1000;
         }
 
         nav a {
-            margin: 0 20px;
             text-decoration: none;
             color: var(--navy);
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            transition: 0.3s;
+            letter-spacing: 1px;
         }
 
-        nav a:hover {
-            color: var(--accent);
-        }
-
+        /* Content Blocks */
         section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 40px;
         }
 
-        .section-box {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 2px;
-            box-shadow: 10px 10px 0px rgba(31, 78, 121, 0.05);
-            margin-bottom: 40px;
-            border: 1px solid #eee;
+        .summary-box {
+            font-size: 1.4rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            color: var(--text-light);
+            border-left: 3px solid var(--gold);
+            padding-left: 30px;
+            margin-bottom: 60px;
         }
 
         h2 {
-            font-family: 'Libre Baskerville', serif;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
             color: var(--navy);
-            font-size: 1.6rem;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border: 1px solid #eee;
+        }
+
+        .card h3 {
             margin-top: 0;
+            color: var(--gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Credentials List */
+        .list-item {
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 15px 0;
         }
 
-        h2::after {
-            content: "";
-            flex-grow: 1;
-            height: 1px;
-            background: #e0d9c5;
-            margin-left: 20px;
-        }
-
-        /* About Me - Third Person Text */
-        .about-text {
-            font-size: 1.05rem;
-            text-align: justify;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            padding: 10px 0 10px 30px;
-            border-bottom: 1px solid #f9f9f9;
-            position: relative;
-        }
-
-        ul li::before {
-            content: "◈";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        .footer {
-            background: var(--navy);
-            color: var(--white);
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-        }
-
-        .contact-links a {
+        .list-item span {
+            font-weight: 600;
             color: var(--navy);
-            font-weight: bold;
-            text-decoration: none;
-            border-bottom: 2px solid var(--accent);
         }
 
-        @media (max-width: 768px) {
-            .header-container { flex-direction: column; text-align: center; }
+        footer {
+            background: #111;
+            color: #777;
+            text-align: center;
+            padding: 60px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; text-align: center; padding: 60px 20px; }
+            .grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
-
 <body>
 
-<header>
-    <div class="header-container">
-        <img src="profile.jpg" alt="Divya Radhakrishnan">
-        <div>
-            <h1>Divya Radhakrishnan</h1>
-            <p class="subtitle">AI Engineer | Signal Processing Specialist</p>
-        </div>
+<div class="hero">
+    <img src="profile.jpg" alt="Divya Radhakrishnan" class="hero-img">
+    <div class="hero-content">
+        <h1>Divya<br>Radhakrishnan</h1>
+        <p>AI Engineer & Signal Processing Expert</p>
     </div>
-</header>
+</div>
 
 <nav>
     <a href="#about">Profile</a>
-    <a href="#credentials">Credentials</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Technical</a>
+    <a href="#credentials">Expertise</a>
+    <a href="#experience">Tenure</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
-    <div class="section-box">
-        <h2>Professional Profile</h2>
-        <div class="about-text">
-            <p>
-                Divya Radhakrishnan is an Electronics and Communication Engineer with over eight years of academic expertise and a specialized M.Tech in Signal Processing. She currently serves as a Freelance Faculty at Xylem Learning, where she mentors students in core electronics and prepares them for rigorous competitive examinations.
-            </p>
-            <p>
-                With a deep-rooted foundation in Digital Signal Processing, Image Processing, and Control Systems, Divya possesses a robust analytical framework for solving complex engineering problems. 
-            </p>
-            <p>
-                She is currently leveraging her engineering background to transition into the field of Artificial Intelligence. Her primary focus lies in the development of <strong>Large Language Models (LLMs) and Agentic AI</strong>—designing autonomous systems capable of sophisticated reasoning and task execution. Her objective is to merge classical engineering principles with modern intelligent systems to create scalable, real-world AI solutions.
-            </p>
+    <div class="summary-box">
+        Divya Radhakrishnan is a veteran electronics engineer bridging the gap between classical Signal Processing and the frontier of Agentic AI.
+    </div>
+    
+    <div class="grid">
+        <div>
+            <p>With over eight years of academic and professional leadership, Divya has established herself as a cornerstone in the South Indian electronics education ecosystem. Her transition into Large Language Models (LLMs) is driven by a deep understanding of systems thinking and digital signal fundamentals.</p>
+        </div>
+        <div>
+            <p>Currently serving as a Faculty at Xylem Learning, she specializes in preparing the next generation of engineers for high-stakes technical environments while architecting autonomous AI systems that reason, plan, and execute.</p>
         </div>
     </div>
 </section>
 
 <section id="credentials">
-    <div class="section-box">
-        <h2>Credentials & Certifications</h2>
-        <ul>
-            <li><strong>UGC NET Qualified (2023)</strong> – Assistant Professor (Electronic Science)</li>
-            <li><strong>Triple GATE Qualified</strong> – Ranked in 2011, 2013, and 2023</li>
-            <li><strong>M.Tech in Signal Processing</strong> – Graduated with First Class (CGPA 8.79)</li>
-            <li><strong>IIT NPTEL Certified</strong> – Artificial Intelligence & Python Programming</li>
-        </ul>
-    </div>
-</section>
-
-<section id="experience">
-    <div class="section-box">
-        <h2>Professional Tenure</h2>
-        <ul>
-            <li><strong>Xylem Learning</strong> – Freelance Faculty (Competitive Coaching)</li>
-            <li><strong>Govt. Women's Polytechnic College</strong> – Guest Lecturer (2023–2025)</li>
-            <li><strong>Adi Shankara College of Engineering</strong> – Assistant Professor (2015–2019)</li>
-            <li><strong>IBS Software Services</strong> – Software Engineer, Technopark (2007–2009)</li>
-        </ul>
-    </div>
-</section>
-
-<section id="skills">
-    <div class="section-box">
-        <h2>Technical Expertise</h2>
-        <p><strong>Core Engineering:</strong> Digital Signal & Image Processing, Control Systems, VHDL, FPGA.</p>
-        <p><strong>Software & AI:</strong> Python, C++, MATLAB, Simulink, LLM Frameworks, Agentic Systems.</p>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="section-box" style="text-align: center;">
-        <h2>Inquiries & Collaboration</h2>
-        <p>Email: <strong>divyar.krishna@gmail.com</strong></p>
-        <div class="contact-links" style="margin-top: 20px;">
-            <a href="https://linkedin.com/in/divya-radhakrishnan-30479a68">LinkedIn</a> &nbsp; | &nbsp; 
-            <a href="https://github.com/divyarkrishnan">GitHub Profile</a>
+    <h2>Academic Excellence</h2>
+    <div class="card">
+        <div class="list-item">
+            <span>UGC NET Qualified (Electronic Science)</span>
+            <span>2023</span>
+        </div>
+        <div class="list-item">
+            <span>GATE National Qualifier (Multiple)</span>
+            <span>2011, 2013, 2023</span>
+        </div>
+        <div class="list-item">
+            <span>M.Tech in Signal Processing</span>
+            <span>Honors</span>
+        </div>
+        <div class="list-item">
+            <span>IIT NPTEL: Artificial Intelligence</span>
+            <span>Certified</span>
         </div>
     </div>
 </section>
 
-<div class="footer">
-    © 2026 Divya Radhakrishnan | Portfolios & Research
-</div>
+<section id="experience">
+    <div class="grid">
+        <div class="card">
+            <h3>Leadership Roles</h3>
+            <p><strong>Xylem Learning</strong><br>Competitive Faculty & Mentor</p>
+            <p><strong>Govt. Women's Polytechnic</strong><br>Guest Lecturer (2023-2025)</p>
+            <p><strong>Adi Shankara College of Eng.</strong><br>Assistant Professor (2015-2019)</p>
+        </div>
+        <div class="card">
+            <h3>Technical Arsenal</h3>
+            <ul style="padding: 0; list-style: none;">
+                <li>◈ Agentic AI Frameworks</li>
+                <li>◈ Digital Image Reconstruction</li>
+                <li>◈ FPGA & VHDL Programming</li>
+                <li>◈ Python & MATLAB Engineering</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contact" style="text-align: center;">
+    <h2>Get in Touch</h2>
+    <p>divyar.krishna@gmail.com</p>
+    <div style="margin-top: 30px;">
+        <a href="https://linkedin.com/in/divya-radhakrishnan-30479a68" style="color: var(--gold); font-weight: bold; text-decoration: none; margin: 0 20px;">LinkedIn</a>
+        <a href="https://github.com/divyarkrishnan" style="color: var(--gold); font-weight: bold; text-decoration: none; margin: 0 20px;">GitHub</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 DIVYA RADHAKRISHNAN STRATEGY. ALL RIGHTS RESERVED.
+</footer>
 
 </body>
 </html>
